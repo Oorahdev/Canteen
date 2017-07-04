@@ -1,0 +1,676 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Canteen
+</name>
+</assembly>
+<members>
+<member name="P:Canteen.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Canteen.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Canteen.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tACTDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tBNKDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tCTGDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tINTDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tINVDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tITMDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tORDDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tORSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tPRFDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tPSNDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tTRNDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tUSRDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.ActDisplayDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.AvailableCtgPlacementDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.PRFDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.CheckShelfInvDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.AccountHistoryDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.AccountHistorySubDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.CtgPlacementDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.VERDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tPOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tPORDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.GetPreOrderItmsDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.TFRDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tACTRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tBNKRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tCTGRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tINTRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tINVRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tITMRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tORDRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tORSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tPRFRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tPSNRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tTRNRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tUSRRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.ActDisplayRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.AvailableCtgPlacementRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.PRFRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.CheckShelfInvRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.AccountHistoryRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.AccountHistorySubRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.CtgPlacementRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.VERRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tPOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tPORRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.GetPreOrderItmsRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.TFRRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteen.tACTRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteen.tBNKRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteen.tCTGRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteen.tINTRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteen.tINVRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteen.tITMRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteen.tORDRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteen.tORSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteen.tPRFRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteen.tPSNRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteen.tTRNRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteen.tUSRRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteen.ActDisplayRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteen.AvailableCtgPlacementRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteen.PRFRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteen.CheckShelfInvRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteen.AccountHistoryRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteen.AccountHistorySubRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteen.CtgPlacementRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteen.VERRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteen.tPOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteen.tPORRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteen.GetPreOrderItmsRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteen.TFRRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteen">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.tACTTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.tBNKTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.tCTGTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.tINTTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.tINVTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.tITMTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.tORDTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.tORSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.tPRFTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.tPSNTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.tTRNTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.tUSRTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.ActDisplayTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.AvailableCtgPlacementTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.PRFTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.CheckShelfInvTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.AccountHistoryTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.AccountHistorySubTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.CtgPlacementTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.VERTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.tPOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.tPORTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.GetPreOrderItmsTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.TFRTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.QueriesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Canteen.dsCanteenTableAdapters.TableAdapterManager.UpdateUpdatedRows(Canteen.dsCanteen,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Canteen.dsCanteenTableAdapters.TableAdapterManager.UpdateInsertedRows(Canteen.dsCanteen,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Canteen.dsCanteenTableAdapters.TableAdapterManager.UpdateDeletedRows(Canteen.dsCanteen,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Canteen.dsCanteenTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Canteen.dsCanteenTableAdapters.TableAdapterManager.UpdateAll(Canteen.dsCanteen)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Canteen.dsCanteenTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lACTDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lBNKDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lCTGDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lINTDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lINVDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lITMDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lORDDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lORSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lPRFDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lPSNDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lTRNDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lUSRDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lACTRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lBNKRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lCTGRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lINTRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lINVRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lITMRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lORDRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lORSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lPRFRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lPSNRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lTRNRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lUSRRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lACTRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lBNKRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lCTGRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lINTRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lINVRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lITMRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lORDRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lORSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lPRFRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lPSNRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lTRNRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteenLog.lUSRRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Canteen.dsCanteenLog">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Canteen.dsCanteenLogTableAdapters.lACTTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenLogTableAdapters.lBNKTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenLogTableAdapters.lCTGTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenLogTableAdapters.lINTTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenLogTableAdapters.lINVTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenLogTableAdapters.lITMTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenLogTableAdapters.lORDTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenLogTableAdapters.lORSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenLogTableAdapters.lPRFTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenLogTableAdapters.lPSNTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenLogTableAdapters.lTRNTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Canteen.dsCanteenLogTableAdapters.lUSRTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Canteen.dsCanteenLogTableAdapters.TableAdapterManager.UpdateUpdatedRows(Canteen.dsCanteenLog,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Canteen.dsCanteenLogTableAdapters.TableAdapterManager.UpdateInsertedRows(Canteen.dsCanteenLog,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Canteen.dsCanteenLogTableAdapters.TableAdapterManager.UpdateDeletedRows(Canteen.dsCanteenLog,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Canteen.dsCanteenLogTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Canteen.dsCanteenLogTableAdapters.TableAdapterManager.UpdateAll(Canteen.dsCanteenLog)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Canteen.dsCanteenLogTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Canteen.dsCanteenLogTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Canteen.dsCanteenLogTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,44 @@
+﻿Partial Class dsCanteen
+    Partial Class ActDisplayDataTable
+
+    End Class
+
+    Partial Class tORDDataTable
+
+    End Class
+
+    Partial Class AccountHistoryDataTable
+
+        Private Sub AccountHistoryDataTable_AccountHistoryRowChanging(ByVal sender As System.Object, ByVal e As AccountHistoryRowChangeEvent) Handles Me.AccountHistoryRowChanging
+
+        End Sub
+
+    End Class
+
+    Partial Class tACTDataTable
+
+    End Class
+
+    Partial Class tITMDataTable
+
+    End Class
+
+End Class
+
+Namespace dsCanteenTableAdapters
+    
+    Partial Public Class tCTGTableAdapter
+    End Class
+End Namespace
+
+Namespace dsCanteenTableAdapters
+    
+    Partial Public Class AccountHistorySubTableAdapter
+    End Class
+End Namespace
+
+Namespace dsCanteenTableAdapters
+    
+    Partial Public Class tACTTableAdapter
+    End Class
+End Namespace

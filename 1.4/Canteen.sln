@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Canteen", "Canteen\Canteen.vbproj", "{A6E4038F-E014-4EF6-9862-55818A57D146}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CanteenInstall", "CanteenInstall\CanteenInstall.vdproj", "{68CFDE25-A3AC-42D7-A203-3AE56C045C56}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6E4038F-E014-4EF6-9862-55818A57D146}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6E4038F-E014-4EF6-9862-55818A57D146}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6E4038F-E014-4EF6-9862-55818A57D146}.Debug|x86.ActiveCfg = Debug|x86
+		{A6E4038F-E014-4EF6-9862-55818A57D146}.Debug|x86.Build.0 = Debug|x86
+		{A6E4038F-E014-4EF6-9862-55818A57D146}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6E4038F-E014-4EF6-9862-55818A57D146}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6E4038F-E014-4EF6-9862-55818A57D146}.Release|x86.ActiveCfg = Release|x86
+		{A6E4038F-E014-4EF6-9862-55818A57D146}.Release|x86.Build.0 = Release|x86
+		{68CFDE25-A3AC-42D7-A203-3AE56C045C56}.Debug|Any CPU.ActiveCfg = Debug
+		{68CFDE25-A3AC-42D7-A203-3AE56C045C56}.Debug|x86.ActiveCfg = Debug
+		{68CFDE25-A3AC-42D7-A203-3AE56C045C56}.Release|Any CPU.ActiveCfg = Release
+		{68CFDE25-A3AC-42D7-A203-3AE56C045C56}.Release|x86.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

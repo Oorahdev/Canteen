@@ -1,0 +1,14 @@
+K 10
+svn:ignore
+V 57
+*.user
+*.suo
+bin
+obj
+Thumbs.db
+Debug
+Release
+*.aps
+*.eto
+
+END
