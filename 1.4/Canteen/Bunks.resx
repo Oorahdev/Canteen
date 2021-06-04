@@ -135,14 +135,14 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnDown.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        R0lGODlhDwAPAPAAAMDAwAAAACH5BAEAAAAALAAAAAAPAA8AAAIWhI+py+0Pg5xzhXRZBltz+IHiSJZK
-        AQA7
+        R0lGODlhDwAPAIEAAMDAwAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEBAAAh+QQBAAAAACwAAAAADwAP
+        AAAIKQABCBxIsKDBgwgTKlzIMIDDhw8PBig4EWFFABctYmS4kaPHjyBDGgwIADs=
 </value>
   </data>
   <data name="btnUp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        R0lGODlhDwAPAPAAAMDAwAAAACH5BAEAAAAALAAAAAAPAA8AAAIWhI+py+0PAozUSXNXxjr4703iSJZm
-        AQA7
+        R0lGODlhDwAPAIEAAMDAwAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEBAAAh+QQBAAAAACwAAAAADwAP
+        AAAIKQABCBxIsKDBgwgTKlwIIADDhhAVOhQ48WBFihYDaNyo8aHHjyBDigwIADs=
 </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -22,33 +22,33 @@ Partial Class Positions
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim lblPositionName As System.Windows.Forms.Label
         Dim lblPositionSort As System.Windows.Forms.Label
         Dim lblCreditLimit As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Positions))
-        Me.txbName = New System.Windows.Forms.TextBox
-        Me.txbSort = New System.Windows.Forms.TextBox
-        Me.AdmKeyboard1 = New adm.admKeyboard
-        Me.pnlPositions = New System.Windows.Forms.Panel
-        Me.txbCreditLimit = New System.Windows.Forms.TextBox
-        Me.btnDown = New System.Windows.Forms.Button
-        Me.btnUp = New System.Windows.Forms.Button
-        Me.lsbPositions = New System.Windows.Forms.ListBox
-        Me.lblPositions = New System.Windows.Forms.Label
-        Me.btnDelete = New System.Windows.Forms.Button
-        Me.lblError = New System.Windows.Forms.Label
-        Me.btnCancel = New System.Windows.Forms.Button
-        Me.btnNew = New System.Windows.Forms.Button
-        Me.btnSave = New System.Windows.Forms.Button
+        Me.txbName = New System.Windows.Forms.TextBox()
+        Me.txbSort = New System.Windows.Forms.TextBox()
+        Me.AdmKeyboard1 = New adm.admKeyboard()
+        Me.pnlPositions = New System.Windows.Forms.Panel()
+        Me.txbCreditLimit = New System.Windows.Forms.TextBox()
+        Me.btnDown = New System.Windows.Forms.Button()
+        Me.btnUp = New System.Windows.Forms.Button()
+        Me.lsbPositions = New System.Windows.Forms.ListBox()
+        Me.lblPositions = New System.Windows.Forms.Label()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.lblError = New System.Windows.Forms.Label()
+        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.btnNew = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
         Me.TPSNBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DsCanteen = New Canteen.dsCanteen
-        Me.TPSNTableAdapter = New Canteen.dsCanteenTableAdapters.tPSNTableAdapter
-        Me.TableAdapterManager = New Canteen.dsCanteenTableAdapters.TableAdapterManager
-        Me.TACTTableAdapter1 = New Canteen.dsCanteenTableAdapters.tACTTableAdapter
-        lblPositionName = New System.Windows.Forms.Label
-        lblPositionSort = New System.Windows.Forms.Label
-        lblCreditLimit = New System.Windows.Forms.Label
+        Me.DsCanteen = New Canteen.dsCanteen()
+        Me.TPSNTableAdapter = New Canteen.dsCanteenTableAdapters.tPSNTableAdapter()
+        Me.TableAdapterManager = New Canteen.dsCanteenTableAdapters.TableAdapterManager()
+        Me.TACTTableAdapter1 = New Canteen.dsCanteenTableAdapters.tACTTableAdapter()
+        lblPositionName = New System.Windows.Forms.Label()
+        lblPositionSort = New System.Windows.Forms.Label()
+        lblCreditLimit = New System.Windows.Forms.Label()
         Me.pnlPositions.SuspendLayout()
         CType(Me.TPSNBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DsCanteen, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -195,7 +195,6 @@ Partial Class Positions
         'btnDelete
         '
         Me.btnDelete.BackColor = System.Drawing.Color.Red
-        Me.btnDelete.Enabled = False
         Me.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.Red
         Me.btnDelete.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonFace
@@ -205,7 +204,6 @@ Partial Class Positions
         Me.btnDelete.TabIndex = 40
         Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = False
-        Me.btnDelete.Visible = False
         '
         'lblError
         '
@@ -262,6 +260,7 @@ Partial Class Positions
         'DsCanteen
         '
         Me.DsCanteen.DataSetName = "dsCanteen"
+        Me.DsCanteen.EnforceConstraints = False
         Me.DsCanteen.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'TPSNTableAdapter
@@ -279,6 +278,8 @@ Partial Class Positions
         Me.TableAdapterManager.tITMTableAdapter = Nothing
         Me.TableAdapterManager.tORDTableAdapter = Nothing
         Me.TableAdapterManager.tORSTableAdapter = Nothing
+        Me.TableAdapterManager.tPORTableAdapter = Nothing
+        Me.TableAdapterManager.tPOSTableAdapter = Nothing
         Me.TableAdapterManager.tPRFTableAdapter = Nothing
         Me.TableAdapterManager.tPSNTableAdapter = Me.TPSNTableAdapter
         Me.TableAdapterManager.tTRNTableAdapter = Nothing

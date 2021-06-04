@@ -1,4 +1,6 @@
-﻿Public Class Bunks
+﻿Imports System.Data.SqlClient
+
+Public Class Bunks
 
     Private Sub Bunks_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'DsCanteen.tBNK' table. You can move, or remove it, as needed.
@@ -76,7 +78,7 @@
     End Sub
 
     Private Sub lsbBunks_SelectedValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lsbBunks.SelectedValueChanged
-        If unsavedChanges = True Then
+        If unsavedChanges = True And deleting = False Then
             Dim dialogResult As DialogResult = MsgBox("This will clear all your changes! Are you sure you would like to continue?", MsgBoxStyle.YesNo)
             If dialogResult = Windows.Forms.DialogResult.No Then
                 Exit Sub
@@ -90,24 +92,41 @@
 
     Private Sub LoadCatInfo()
         If Not lsbBunks.SelectedValue Is Nothing Then
-            TBNKTableAdapter.FillByBnkId(Me.DsCanteen.tBNK, lsbBunks.SelectedValue)
+            TBNKTableAdapter.FillByBnkid(Me.DsCanteen.tBNK, lsbBunks.SelectedValue)
             txbBnkname.Text = DsCanteen.tBNK.Item(0).BNK_Name
             unsavedChanges = False
         End If
     End Sub
 
     Private Sub btnDelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDelete.Click
-
         If lsbBunks.SelectedValue > 0 Then
-            TBNKTableAdapter.DeleteByBnkId(lsbBunks.SelectedValue)
-            ClearTxbs()
-            lsbBunks.DataSource = Me.TBNKTableAdapter.GetDataBySort()
+            If hasActsRelated(lsbBunks.SelectedValue) Then
+                MsgBox("There bunk is already linked to a user. It cannot be deleted")
+            Else
+                deleting = True
+                TBNKTableAdapter.DeleteByBnkId(lsbBunks.SelectedValue)
+                ClearTxbs()
+                lsbBunks.DataSource = Me.TBNKTableAdapter.GetDataBySort()
+                deleting = False
+            End If
         End If
         unsavedChanges = False
     End Sub
 
-    Dim unsavedChanges As Boolean = False
+    Private Function hasActsRelated(bnkId As Integer) As Boolean
+        Dim connection As New SqlConnection(My.Settings.CanteenConnectionString)
+        connection.Open()
+        Dim cmd As SqlCommand = New SqlCommand("select * from act where ACT_BNK_ID=" + bnkId.ToString(), connection)
+        Dim result = cmd.ExecuteScalar()
+        If (result) Is Nothing Then
+            Return False
+        Else
+            Return True
+        End If
+    End Function
 
+    Dim unsavedChanges As Boolean = False
+    Dim deleting As Boolean = False
     Private Sub txbActId_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txbBnkname.TextChanged
         unsavedChanges = True
     End Sub

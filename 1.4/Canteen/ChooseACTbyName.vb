@@ -160,7 +160,7 @@ Public Class ChooseACTbyName
         Me.DialogResult = Windows.Forms.DialogResult.Cancel
     End Sub
     Dim actId As Integer
-    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
+    Private Sub EnlargePhoto() Handles PictureBox1.Click
         If Not PictureBox1.Image Is Nothing Then
             actId = lsbActID.SelectedValue
             Dim frmEnlargePhoto As New EnlargePhoto

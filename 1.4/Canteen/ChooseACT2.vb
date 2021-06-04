@@ -12,6 +12,7 @@ Public Class ChooseACT2
     Public Function SelectAct() As Integer
         If Me.DialogResult = Windows.Forms.DialogResult.OK Then
             If lsbActID.SelectedItems.Count() > 0 Then
+                EnlargePhoto()
                 Return Me.lsbActID.SelectedValue
             Else
                 Return 0
@@ -95,9 +96,11 @@ Public Class ChooseACT2
         current.SelectionLength = ret.SelectionLength
     End Sub
     Public Sub AdmKeypad1_OnKeyPressSpecial_1(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles AdmKeyboard1.OnKeyPressSpecial
+
         Select Case e.KeyCode
             Case Is = Keys.Enter
-                If preOrderMode = True And CheckTimeRange() = False Then
+                EnlargePhoto()
+                If preOrderMode() = True And CheckTimeRange() = False Then
                     Exit Sub
                 End If
 
@@ -219,7 +222,7 @@ Public Class ChooseACT2
 
     Private Sub txbActID_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txbActID.KeyDown
         If e.KeyCode = Keys.Enter Then
-            If preOrderMode = True And CheckTimeRange() = False Then
+            If preOrderMode() = True And CheckTimeRange() = False Then
                 Exit Sub
             End If
             If boolPhotoWarning = True Then
@@ -267,7 +270,7 @@ Public Class ChooseACT2
         Me.DialogResult = Windows.Forms.DialogResult.OK
     End Sub
 
-    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
+    Private Sub EnlargePhoto() Handles PictureBox1.Click
         If Not PictureBox1.Image Is Nothing Then
             actId = lsbActID.SelectedValue
             Dim frmEnlargePhoto As New EnlargePhoto

@@ -177,14 +177,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Canteen.exe" size="4563456">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Canteen.exe" size="4565504">
       <assemblyIdentity name="Canteen" version="1.4.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>vDQ1VIE7SJ6GsSK3F7HneV06Ru4=</dsig:DigestValue>
+        <dsig:DigestValue>6Fo8iS1/3Le4EPTGUg0wxsFeFE0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

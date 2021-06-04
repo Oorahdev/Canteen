@@ -22,7 +22,7 @@ Partial Class Items
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim lblItmName As System.Windows.Forms.Label
         Dim lblItmCatId As System.Windows.Forms.Label
         Dim lblItmPlcmnt As System.Windows.Forms.Label
@@ -33,47 +33,47 @@ Partial Class Items
         Dim lblItmReorder As System.Windows.Forms.Label
         Dim Label1 As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Items))
-        Me.pnlKeyboard = New System.Windows.Forms.Panel
-        Me.AdmKeyboard1 = New adm.admKeyboard
-        Me.txbName = New System.Windows.Forms.TextBox
-        Me.cboCatId = New System.Windows.Forms.ComboBox
-        Me.txbPrice = New System.Windows.Forms.TextBox
-        Me.txbQtyShelf = New System.Windows.Forms.TextBox
-        Me.txbQtyUnit = New System.Windows.Forms.TextBox
-        Me.txbReorder = New System.Windows.Forms.TextBox
-        Me.lsbItems = New System.Windows.Forms.ListBox
-        Me.pnlItems = New System.Windows.Forms.Panel
-        Me.btnDown = New System.Windows.Forms.Button
-        Me.btnUp = New System.Windows.Forms.Button
-        Me.cboPrinter = New System.Windows.Forms.ComboBox
-        Me.cboPlacement = New System.Windows.Forms.ComboBox
-        Me.lblError = New System.Windows.Forms.Label
-        Me.btnCancel = New System.Windows.Forms.Button
-        Me.lblItems = New System.Windows.Forms.Label
-        Me.btnDelete = New System.Windows.Forms.Button
-        Me.btnNew = New System.Windows.Forms.Button
-        Me.btnSave = New System.Windows.Forms.Button
-        Me.DsCanteen = New Canteen.dsCanteen
+        Me.pnlKeyboard = New System.Windows.Forms.Panel()
+        Me.AdmKeyboard1 = New adm.admKeyboard()
+        Me.txbName = New System.Windows.Forms.TextBox()
+        Me.cboCatId = New System.Windows.Forms.ComboBox()
+        Me.txbPrice = New System.Windows.Forms.TextBox()
+        Me.txbQtyShelf = New System.Windows.Forms.TextBox()
+        Me.txbQtyUnit = New System.Windows.Forms.TextBox()
+        Me.txbReorder = New System.Windows.Forms.TextBox()
+        Me.lsbItems = New System.Windows.Forms.ListBox()
+        Me.pnlItems = New System.Windows.Forms.Panel()
+        Me.btnDown = New System.Windows.Forms.Button()
+        Me.btnUp = New System.Windows.Forms.Button()
+        Me.cboPrinter = New System.Windows.Forms.ComboBox()
+        Me.cboPlacement = New System.Windows.Forms.ComboBox()
+        Me.lblError = New System.Windows.Forms.Label()
+        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.lblItems = New System.Windows.Forms.Label()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnNew = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.DsCanteen = New Canteen.dsCanteen()
         Me.TITMBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TITMTableAdapter = New Canteen.dsCanteenTableAdapters.tITMTableAdapter
-        Me.TableAdapterManager = New Canteen.dsCanteenTableAdapters.TableAdapterManager
-        Me.TCTGTableAdapter1 = New Canteen.dsCanteenTableAdapters.tCTGTableAdapter
+        Me.TITMTableAdapter = New Canteen.dsCanteenTableAdapters.tITMTableAdapter()
+        Me.TableAdapterManager = New Canteen.dsCanteenTableAdapters.TableAdapterManager()
+        Me.TCTGTableAdapter1 = New Canteen.dsCanteenTableAdapters.tCTGTableAdapter()
         Me.AvailableCtgPlacementBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.AvailableCtgPlacementTableAdapter = New Canteen.dsCanteenTableAdapters.AvailableCtgPlacementTableAdapter
+        Me.AvailableCtgPlacementTableAdapter = New Canteen.dsCanteenTableAdapters.AvailableCtgPlacementTableAdapter()
         Me.PRFBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PRFTableAdapter = New Canteen.dsCanteenTableAdapters.PRFTableAdapter
+        Me.PRFTableAdapter = New Canteen.dsCanteenTableAdapters.PRFTableAdapter()
         Me.CtgPlacementBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CtgPlacementTableAdapter = New Canteen.dsCanteenTableAdapters.CtgPlacementTableAdapter
-        Me.TITMTableAdapter1 = New Canteen.dsCanteenTableAdapters.tITMTableAdapter
-        lblItmName = New System.Windows.Forms.Label
-        lblItmCatId = New System.Windows.Forms.Label
-        lblItmPlcmnt = New System.Windows.Forms.Label
-        lblItmPrice = New System.Windows.Forms.Label
-        lblItmPrinter = New System.Windows.Forms.Label
-        lblItmQtyShelf = New System.Windows.Forms.Label
-        lblItmQtyUnit = New System.Windows.Forms.Label
-        lblItmReorder = New System.Windows.Forms.Label
-        Label1 = New System.Windows.Forms.Label
+        Me.CtgPlacementTableAdapter = New Canteen.dsCanteenTableAdapters.CtgPlacementTableAdapter()
+        Me.TITMTableAdapter1 = New Canteen.dsCanteenTableAdapters.tITMTableAdapter()
+        lblItmName = New System.Windows.Forms.Label()
+        lblItmCatId = New System.Windows.Forms.Label()
+        lblItmPlcmnt = New System.Windows.Forms.Label()
+        lblItmPrice = New System.Windows.Forms.Label()
+        lblItmPrinter = New System.Windows.Forms.Label()
+        lblItmQtyShelf = New System.Windows.Forms.Label()
+        lblItmQtyUnit = New System.Windows.Forms.Label()
+        lblItmReorder = New System.Windows.Forms.Label()
+        Label1 = New System.Windows.Forms.Label()
         Me.pnlKeyboard.SuspendLayout()
         Me.pnlItems.SuspendLayout()
         CType(Me.DsCanteen, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -255,7 +255,7 @@ Partial Class Items
         'lsbItems
         '
         Me.lsbItems.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.lsbItems.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lsbItems.ForeColor = System.Drawing.Color.Black
         Me.lsbItems.FormattingEnabled = True
@@ -379,7 +379,6 @@ Partial Class Items
         'btnDelete
         '
         Me.btnDelete.BackColor = System.Drawing.Color.Red
-        Me.btnDelete.Enabled = False
         Me.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.Red
         Me.btnDelete.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonFace
@@ -389,7 +388,6 @@ Partial Class Items
         Me.btnDelete.TabIndex = 9
         Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = False
-        Me.btnDelete.Visible = False
         '
         'btnNew
         '
@@ -418,6 +416,7 @@ Partial Class Items
         'DsCanteen
         '
         Me.DsCanteen.DataSetName = "dsCanteen"
+        Me.DsCanteen.EnforceConstraints = False
         Me.DsCanteen.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'TITMBindingSource
@@ -440,6 +439,8 @@ Partial Class Items
         Me.TableAdapterManager.tITMTableAdapter = Me.TITMTableAdapter
         Me.TableAdapterManager.tORDTableAdapter = Nothing
         Me.TableAdapterManager.tORSTableAdapter = Nothing
+        Me.TableAdapterManager.tPORTableAdapter = Nothing
+        Me.TableAdapterManager.tPOSTableAdapter = Nothing
         Me.TableAdapterManager.tPRFTableAdapter = Nothing
         Me.TableAdapterManager.tPSNTableAdapter = Nothing
         Me.TableAdapterManager.tTRNTableAdapter = Nothing

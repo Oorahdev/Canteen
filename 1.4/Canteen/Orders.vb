@@ -306,9 +306,14 @@ Public Class Orders
     Private Sub btnRemove_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRemove.Click
         If lsbItems.SelectedItems.Count > 0 Then 'SelectedIndex >= 0 And lsbItems.SelectedIndex <= itm Then
             Dim selectedItem As CanteenItm = lsbItems.SelectedItems(0)
+            Dim selectedIndex As Integer = lsbItems.SelectedIndex
             lsbItems.Items.Remove(selectedItem)
             subTotal -= selectedItem.Price
             lblSub.Text = FormatCurrency(subTotal)
+            If lsbItems.Items.Count < selectedIndex + 1 Then
+                selectedIndex -= 1
+            End If
+            lsbItems.SelectedIndex = selectedIndex
         End If
         calcPrizeMoney()
         calcTotal()

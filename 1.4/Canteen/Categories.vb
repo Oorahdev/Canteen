@@ -1,4 +1,6 @@
-﻿Public Class Categories
+﻿Imports System.Data.SqlClient
+
+Public Class Categories
 
     Private Sub Categories_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'Me.TCTGTableAdapter.Fill(Me.DsCanteen.tCTG)
@@ -11,7 +13,7 @@
         LoadCatInfo()
         unsavedChanges = False
     End Sub
-
+    Dim deleting As Boolean = False
     Dim ctlCurrent As TextBox
     Private Sub txbActId_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txbCatName.GotFocus, txbCatQty.GotFocus, txbCatSection.GotFocus, txbCatSort.GotFocus
         ctlCurrent = sender
@@ -159,7 +161,7 @@
     Dim lsbSelectedIndex As Integer = 0
 
     Private Sub lsbCategories_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lsbCategories.SelectedIndexChanged
-        If unsavedChanges = True Then
+        If unsavedChanges = True AndAlso deleting = False Then
             Dim dialogResult As DialogResult = MsgBox("This will clear all your changes! Are you sure you would like to continue?", MsgBoxStyle.YesNo)
             If dialogResult = Windows.Forms.DialogResult.No Then
                 ' unsavedChanges = False
@@ -176,7 +178,7 @@
 
     Private Sub LoadCatInfo()
         If Not lsbCategories.SelectedValue Is Nothing Then
-            TCTGTableAdapter.FillByCatId(Me.DsCanteen.tCTG, lsbCategories.SelectedValue)
+            TCTGTableAdapter.FillByCatID(Me.DsCanteen.tCTG, lsbCategories.SelectedValue)
             txbCatName.Text = DsCanteen.tCTG.Item(0).CTG_Name
             txbCatQty.Text = DsCanteen.tCTG.Item(0).CTG_Qty
             txbCatSection.Text = DsCanteen.tCTG.Item(0).CTG_Section
@@ -193,11 +195,29 @@
     Private Sub btnDelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDelete.Click
         unsavedChanges = False
         If lsbCategories.SelectedValue > 0 Then
-            TCTGTableAdapter.DeleteByCatId(lsbCategories.SelectedValue)
-            ClearTxbs()
-            lsbCategories.DataSource = Me.TCTGTableAdapter.GetDataBySort()
+            If hasItemsRelated(lsbCategories.SelectedValue) Then
+                MsgBox("There are items related to this category. Delete the items if you wish to delete the category.")
+            Else
+                deleting = True
+                TCTGTableAdapter.DeleteByCatId(lsbCategories.SelectedValue)
+                ClearTxbs()
+                lsbCategories.DataSource = Me.TCTGTableAdapter.GetDataBySort()
+                deleting = False
+            End If
         End If
     End Sub
+
+    Private Function hasItemsRelated(ctgId As Integer) As Boolean
+        Dim connection As New SqlConnection(My.Settings.CanteenConnectionString)
+        connection.Open()
+        Dim cmd As SqlCommand = New SqlCommand("select itm_name from itm where itm_ctg_id=" + ctgId.ToString(), connection)
+        Dim result = cmd.ExecuteScalar()
+        If (result) Is Nothing Then
+            Return False
+        Else
+            Return True
+        End If
+    End Function
 
     Dim unsavedChanges As Boolean = False
 

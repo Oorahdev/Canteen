@@ -168,7 +168,7 @@
     End Sub
     Dim lsbSelectedIndex As Integer = 0
     Private Sub lsbItems_SelectedValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lsbItems.SelectedIndexChanged
-        If unsavedChanges = True Then
+        If unsavedChanges = True And deleting = False Then
             Dim dialogResult As DialogResult = MsgBox("This will clear all your changes! Are you sure you would like to continue?", MsgBoxStyle.YesNo)
             If dialogResult = Windows.Forms.DialogResult.No Then
                 lsbItems.SelectedIndex = lsbSelectedIndex
@@ -204,12 +204,15 @@
             unsavedChanges = False
         End If
     End Sub
+    Dim deleting As Boolean = False
 
     Private Sub btnDelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDelete.Click
         If lsbItems.SelectedValue > 0 Then
+            deleting = True
             TITMTableAdapter.DeleteByItmId(lsbItems.SelectedValue)
             ClearTxbs()
             lsbItems.DataSource = Me.TITMTableAdapter.GetDataBySort()
+            deleting = False
         End If
         unsavedChanges = False
     End Sub

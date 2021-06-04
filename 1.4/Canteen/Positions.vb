@@ -1,4 +1,6 @@
-﻿Public Class Positions
+﻿Imports System.Data.SqlClient
+
+Public Class Positions
 
     Private Sub Positions_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'DsCanteen.tPSN' table. You can move, or remove it, as needed.
@@ -7,7 +9,9 @@
         lsbPositions.ValueMember = "PSN_ID"
         lsbPositions.DataSource = Me.TPSNTableAdapter.GetData()
         unsavedChanges = False
+
     End Sub
+    Dim deleting As Boolean = False
     Dim ctlCurrent As TextBox
     Private Sub txbName_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txbName.GotFocus, txbSort.GotFocus, txbCreditLimit.GotFocus
         ctlCurrent = sender
@@ -126,7 +130,7 @@
     End Sub
     Dim lsbSelectedIndex As Integer = 0
     Private Sub lsbPositions_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lsbPositions.SelectedIndexChanged
-        If unsavedChanges = True Then
+        If unsavedChanges = True AndAlso deleting = False Then
             Dim dialogResult As DialogResult = MsgBox("This will clear all your changes! Are you sure you would like to continue?", MsgBoxStyle.YesNo)
             If dialogResult = Windows.Forms.DialogResult.No Then
                 lsbPositions.SelectedIndex = lsbSelectedIndex
@@ -157,12 +161,29 @@
 
     Private Sub btnDelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDelete.Click
         unsavedChanges = False
+        deleting = True
         If lsbPositions.SelectedValue > 0 Then
-            TPSNTableAdapter.DeleteByPsnId(lsbPositions.SelectedValue)
-            ClearTxbs()
-            lsbPositions.DataSource = Me.TPSNTableAdapter.GetData()
+            If hasActsRelated(lsbPositions.SelectedValue) Then
+                MsgBox("There are accounts linked to this position. It cannot be deleted.")
+            Else
+                TPSNTableAdapter.DeleteByPsnId(lsbPositions.SelectedValue)
+                ClearTxbs()
+                lsbPositions.DataSource = Me.TPSNTableAdapter.GetData()
+            End If
         End If
     End Sub
+
+    Private Function hasActsRelated(psnId As Integer) As Boolean
+        Dim connection As New SqlConnection(My.Settings.CanteenConnectionString)
+        connection.Open()
+        Dim cmd As SqlCommand = New SqlCommand("select * from act where ACT_PSN_ID=" + psnId.ToString(), connection)
+        Dim result = cmd.ExecuteScalar()
+        If (result) Is Nothing Then
+            Return False
+        Else
+            Return True
+        End If
+    End Function
 
     Dim unsavedChanges As Boolean = False
 
@@ -171,7 +192,7 @@
     End Sub
 
     Private Sub Items_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
-        If unsavedChanges = True Then
+        If unsavedChanges = True AndAlso deleting = False Then
             Dim dialogResult As DialogResult = MsgBox("This will clear all your changes! Are you sure you would like to continue?", MsgBoxStyle.YesNo)
             If dialogResult = Windows.Forms.DialogResult.No Then
                 e.Cancel = True

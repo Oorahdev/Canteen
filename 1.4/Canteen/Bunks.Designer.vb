@@ -22,27 +22,27 @@ Partial Class Bunks
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim lblBnkName As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Bunks))
-        Me.pnlKeyboard = New System.Windows.Forms.Panel
-        Me.AdmKeyboard1 = New adm.admKeyboard
-        Me.DsCanteen = New Canteen.dsCanteen
+        Me.pnlKeyboard = New System.Windows.Forms.Panel()
+        Me.AdmKeyboard1 = New adm.admKeyboard()
+        Me.DsCanteen = New Canteen.dsCanteen()
         Me.TBNKBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TBNKTableAdapter = New Canteen.dsCanteenTableAdapters.tBNKTableAdapter
-        Me.TableAdapterManager = New Canteen.dsCanteenTableAdapters.TableAdapterManager
-        Me.txbBnkname = New System.Windows.Forms.TextBox
-        Me.lsbBunks = New System.Windows.Forms.ListBox
-        Me.lblBunks = New System.Windows.Forms.Label
-        Me.btnDelete = New System.Windows.Forms.Button
-        Me.btnCancel = New System.Windows.Forms.Button
-        Me.btnNew = New System.Windows.Forms.Button
-        Me.btnSave = New System.Windows.Forms.Button
-        Me.lblError = New System.Windows.Forms.Label
-        Me.Panel1 = New System.Windows.Forms.Panel
-        Me.btnDown = New System.Windows.Forms.Button
-        Me.btnUp = New System.Windows.Forms.Button
-        lblBnkName = New System.Windows.Forms.Label
+        Me.TBNKTableAdapter = New Canteen.dsCanteenTableAdapters.tBNKTableAdapter()
+        Me.TableAdapterManager = New Canteen.dsCanteenTableAdapters.TableAdapterManager()
+        Me.txbBnkname = New System.Windows.Forms.TextBox()
+        Me.lsbBunks = New System.Windows.Forms.ListBox()
+        Me.lblBunks = New System.Windows.Forms.Label()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.btnNew = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.lblError = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnDown = New System.Windows.Forms.Button()
+        Me.btnUp = New System.Windows.Forms.Button()
+        lblBnkName = New System.Windows.Forms.Label()
         Me.pnlKeyboard.SuspendLayout()
         CType(Me.DsCanteen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TBNKBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -86,6 +86,7 @@ Partial Class Bunks
         'DsCanteen
         '
         Me.DsCanteen.DataSetName = "dsCanteen"
+        Me.DsCanteen.EnforceConstraints = False
         Me.DsCanteen.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'TBNKBindingSource
@@ -108,6 +109,8 @@ Partial Class Bunks
         Me.TableAdapterManager.tITMTableAdapter = Nothing
         Me.TableAdapterManager.tORDTableAdapter = Nothing
         Me.TableAdapterManager.tORSTableAdapter = Nothing
+        Me.TableAdapterManager.tPORTableAdapter = Nothing
+        Me.TableAdapterManager.tPOSTableAdapter = Nothing
         Me.TableAdapterManager.tPRFTableAdapter = Nothing
         Me.TableAdapterManager.tPSNTableAdapter = Nothing
         Me.TableAdapterManager.tTRNTableAdapter = Nothing
@@ -148,7 +151,6 @@ Partial Class Bunks
         'btnDelete
         '
         Me.btnDelete.BackColor = System.Drawing.Color.Red
-        Me.btnDelete.Enabled = False
         Me.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.Red
         Me.btnDelete.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonFace
@@ -158,7 +160,6 @@ Partial Class Bunks
         Me.btnDelete.TabIndex = 2
         Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = False
-        Me.btnDelete.Visible = False
         '
         'btnCancel
         '

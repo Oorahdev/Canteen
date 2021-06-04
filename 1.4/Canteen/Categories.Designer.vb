@@ -22,40 +22,40 @@ Partial Class Categories
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
+        Me.components = New System.ComponentModel.Container()
         Dim lblCategoryName As System.Windows.Forms.Label
         Dim lblCategorySection As System.Windows.Forms.Label
         Dim lblCategoryQty As System.Windows.Forms.Label
         Dim lblCategorySort As System.Windows.Forms.Label
         Dim lblCategoryPrinter As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Categories))
-        Me.btnCancel = New System.Windows.Forms.Button
-        Me.pnlKeyboard = New System.Windows.Forms.Panel
-        Me.AdmKeyboard1 = New adm.admKeyboard
-        Me.Panel1 = New System.Windows.Forms.Panel
-        Me.cboCatPrinter = New System.Windows.Forms.ComboBox
-        Me.btnDown = New System.Windows.Forms.Button
-        Me.btnUp = New System.Windows.Forms.Button
-        Me.lblError = New System.Windows.Forms.Label
-        Me.lblCategories = New System.Windows.Forms.Label
-        Me.btnDelete = New System.Windows.Forms.Button
-        Me.btnNew = New System.Windows.Forms.Button
-        Me.btnSave = New System.Windows.Forms.Button
-        Me.txbCatName = New System.Windows.Forms.TextBox
-        Me.txbCatSection = New System.Windows.Forms.TextBox
-        Me.txbCatQty = New System.Windows.Forms.TextBox
-        Me.txbCatSort = New System.Windows.Forms.TextBox
-        Me.lsbCategories = New System.Windows.Forms.ListBox
+        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.pnlKeyboard = New System.Windows.Forms.Panel()
+        Me.AdmKeyboard1 = New adm.admKeyboard()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.cboCatPrinter = New System.Windows.Forms.ComboBox()
+        Me.btnDown = New System.Windows.Forms.Button()
+        Me.btnUp = New System.Windows.Forms.Button()
+        Me.lblError = New System.Windows.Forms.Label()
+        Me.lblCategories = New System.Windows.Forms.Label()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnNew = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.txbCatName = New System.Windows.Forms.TextBox()
+        Me.txbCatSection = New System.Windows.Forms.TextBox()
+        Me.txbCatQty = New System.Windows.Forms.TextBox()
+        Me.txbCatSort = New System.Windows.Forms.TextBox()
+        Me.lsbCategories = New System.Windows.Forms.ListBox()
         Me.TCTGBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DsCanteen = New Canteen.dsCanteen
-        Me.TCTGTableAdapter = New Canteen.dsCanteenTableAdapters.tCTGTableAdapter
-        Me.TableAdapterManager = New Canteen.dsCanteenTableAdapters.TableAdapterManager
-        Me.TPRFTableAdapter1 = New Canteen.dsCanteenTableAdapters.tPRFTableAdapter
-        lblCategoryName = New System.Windows.Forms.Label
-        lblCategorySection = New System.Windows.Forms.Label
-        lblCategoryQty = New System.Windows.Forms.Label
-        lblCategorySort = New System.Windows.Forms.Label
-        lblCategoryPrinter = New System.Windows.Forms.Label
+        Me.DsCanteen = New Canteen.dsCanteen()
+        Me.TCTGTableAdapter = New Canteen.dsCanteenTableAdapters.tCTGTableAdapter()
+        Me.TableAdapterManager = New Canteen.dsCanteenTableAdapters.TableAdapterManager()
+        Me.TPRFTableAdapter1 = New Canteen.dsCanteenTableAdapters.tPRFTableAdapter()
+        lblCategoryName = New System.Windows.Forms.Label()
+        lblCategorySection = New System.Windows.Forms.Label()
+        lblCategoryQty = New System.Windows.Forms.Label()
+        lblCategorySort = New System.Windows.Forms.Label()
+        lblCategoryPrinter = New System.Windows.Forms.Label()
         Me.pnlKeyboard.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.TCTGBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -237,7 +237,6 @@ Partial Class Categories
         'btnDelete
         '
         Me.btnDelete.BackColor = System.Drawing.Color.Red
-        Me.btnDelete.Enabled = False
         Me.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.Red
         Me.btnDelete.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonFace
@@ -247,7 +246,6 @@ Partial Class Categories
         Me.btnDelete.TabIndex = 38
         Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = False
-        Me.btnDelete.Visible = False
         '
         'btnNew
         '
@@ -312,7 +310,7 @@ Partial Class Categories
         'lsbCategories
         '
         Me.lsbCategories.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.lsbCategories.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold)
         Me.lsbCategories.ForeColor = System.Drawing.Color.Black
         Me.lsbCategories.FormattingEnabled = True
@@ -330,6 +328,7 @@ Partial Class Categories
         'DsCanteen
         '
         Me.DsCanteen.DataSetName = "dsCanteen"
+        Me.DsCanteen.EnforceConstraints = False
         Me.DsCanteen.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'TCTGTableAdapter
@@ -347,6 +346,8 @@ Partial Class Categories
         Me.TableAdapterManager.tITMTableAdapter = Nothing
         Me.TableAdapterManager.tORDTableAdapter = Nothing
         Me.TableAdapterManager.tORSTableAdapter = Nothing
+        Me.TableAdapterManager.tPORTableAdapter = Nothing
+        Me.TableAdapterManager.tPOSTableAdapter = Nothing
         Me.TableAdapterManager.tPRFTableAdapter = Nothing
         Me.TableAdapterManager.tPSNTableAdapter = Nothing
         Me.TableAdapterManager.tTRNTableAdapter = Nothing
