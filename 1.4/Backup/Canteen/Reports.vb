@@ -1,0 +1,77 @@
+﻿Public Class Reports
+
+    Private Sub btnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancel.Click
+        Me.DialogResult = Windows.Forms.DialogResult.Cancel
+    End Sub
+
+
+    Private Sub btnActBalances_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnActBalances.Click
+        AccountBalances.DataSource.ConnectionString = UpdateShelves.GetOledbConnectionString()
+        AccountBalances.DataSource.RecordSource = ""
+        'AccountBalances.DataSource.RecordSource = "PARAMETERS [As Of Date:] date, [As Of Time:] time; select act_id, act_number, act_lastname, act_firstname, sum(trn_amount) Balance from trn inner join act on act_id = trn_act_id where trn_dateentered <= cast([As Of Date:] + ' ' + [As Of Time:] as datetime) group by act_id, act_number, act_lastname, act_firstname"
+        AccountBalances.DataSource.RecordSource = "PARAMETERS [As Of Date:] date, [As Of Time:] time; select act_id, act_number, act_lastname, act_firstname, act_bnk_id, bnk_name, isnull((select sum(trn_amount) from trn where trn_act_id = act_id and TRN_Type not like '%prize%' and trn_dateentered <= cast([As Of Date:] + ' ' + [As Of Time:] as datetime)), 0.00) Balance, isnull((select sum(trn_amount) from trn where trn_act_id = act_id and TRN_Type like '%prize%' and trn_dateentered <= cast([As Of Date:] + ' ' + [As Of Time:] as datetime)), 0.00) PrizeBalance from act left outer join bnk on bnk_id = act_bnk_id order by act_status, act_id"
+        Dim frmPrintPreview As New PrintPreview
+        frmPrintPreview.C1PrintPreviewControl1.Document = AccountBalances.Document
+        frmPrintPreview.ShowDialog()
+
+    End Sub
+
+    Private Sub btnItem_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnItem.Click
+        ItemCards.DataSource.ConnectionString = UpdateShelves.GetOledbConnectionString()
+        ItemCards.DataSource.RecordSource = ""
+        ItemCards.DataSource.RecordSource = "SELECT * FROM ITM INNER JOIN CTG ON ITM_CTG_ID = CTG_ID"
+        Dim frmPrintPreview As New PrintPreview
+        frmPrintPreview.C1PrintPreviewControl1.Document = ItemCards.Document
+        frmPrintPreview.ShowDialog()
+
+    End Sub
+
+    Private Sub btnItemsTotSold_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnItemsTotSold.Click
+        ItemTotals.DataSource.ConnectionString = UpdateShelves.GetOledbConnectionString()
+        ItemTotals.DataSource.RecordSource = ""
+        ItemTotals.DataSource.RecordSource = "SELECT * FROM ItemTotals"
+        Dim frmPrintPreview As New PrintPreview
+        frmPrintPreview.C1PrintPreviewControl1.Document = ItemTotals.Document
+        frmPrintPreview.ShowDialog()
+
+    End Sub
+    Private Sub btnTotals_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnTotals.Click
+        Totals.DataSource.ConnectionString = UpdateShelves.GetOledbConnectionString()
+        Totals.DataSource.RecordSource = ""
+        Totals.DataSource.RecordSource = "SELECT * FROM Totals"
+        Dim frmPrintPreview As New PrintPreview
+        frmPrintPreview.C1PrintPreviewControl1.Document = Totals.Document
+        frmPrintPreview.ShowDialog()
+
+    End Sub
+
+    Private Sub btnShelfRestock_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnShelfRestock.Click
+        CheckShelfInv.DataSource.ConnectionString = UpdateShelves.GetOledbConnectionString()
+        CheckShelfInv.DataSource.RecordSource = ""
+        CheckShelfInv.DataSource.RecordSource = "SELECT * FROM CheckShelfInv"
+        Dim frmPrintPreview As New PrintPreview
+        frmPrintPreview.C1PrintPreviewControl1.Document = CheckShelfInv.Document
+        frmPrintPreview.ShowDialog()
+    End Sub
+
+    Private Sub btnStockReorder_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnStockReorder.Click
+        ReorderInventory.DataSource.ConnectionString = UpdateShelves.GetOledbConnectionString()
+        ReorderInventory.DataSource.RecordSource = ""
+        ReorderInventory.DataSource.RecordSource = "SELECT * FROM ReorderInventory"
+        Dim frmPrintPreview As New PrintPreview
+        frmPrintPreview.C1PrintPreviewControl1.Document = ReorderInventory.Document
+        frmPrintPreview.ShowDialog()
+    End Sub
+
+    Private Sub btnPreOrders_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPreOrders.Click
+        AccountBalances.DataSource.ConnectionString = UpdateShelves.GetOledbConnectionString()
+        AccountBalances.DataSource.RecordSource = ""
+        AccountBalances.DataSource.RecordSource = "select * from por " & _
+        "join act on act_id = por_act_id " & _
+        "join pos on pos_por_id = por_id " & _
+        "where Dateadd(day, 0, datediff(day, 0, por_date)) = Dateadd(day, 0, datediff(day, 0, getdate()))"
+        Dim frmPrintPreview As New PrintPreview
+        frmPrintPreview.C1PrintPreviewControl1.Document = PreOrders.Document
+        frmPrintPreview.ShowDialog()
+    End Sub
+End Class

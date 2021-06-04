@@ -38,10 +38,10 @@ Partial Class AccountHistory
         Me.btnCancel = New System.Windows.Forms.Button
         Me.rptAccountHistory = New C1.Win.C1Report.C1Report
         Me.rptLastTrans = New C1.Win.C1Report.C1Report
-        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
-        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
-        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
-        Me.lnsCancel = New Microsoft.VisualBasic.PowerPacks.LineShape
+        'Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer
+        'Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape
+        'Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape
+        'Me.lnsCancel = New Microsoft.VisualBasic.PowerPacks.LineShape
         Me.pnlHistory = New System.Windows.Forms.Panel
         Me.Label3 = New System.Windows.Forms.Label
         Me.Label2 = New System.Windows.Forms.Label
@@ -235,46 +235,46 @@ Partial Class AccountHistory
         '
         'ShapeContainer1
         '
-        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
-        Me.ShapeContainer1.Name = "ShapeContainer1"
-        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape2, Me.LineShape1, Me.lnsCancel})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(374, 516)
-        Me.ShapeContainer1.TabIndex = 29
-        Me.ShapeContainer1.TabStop = False
-        '
-        'LineShape2
-        '
-        Me.LineShape2.BorderColor = System.Drawing.Color.LightSteelBlue
-        Me.LineShape2.BorderWidth = 3
-        Me.LineShape2.Name = "LineShape2"
-        Me.LineShape2.SelectionColor = System.Drawing.Color.NavajoWhite
-        Me.LineShape2.X1 = 11
-        Me.LineShape2.X2 = 365
-        Me.LineShape2.Y1 = 127
-        Me.LineShape2.Y2 = 127
-        '
-        'LineShape1
-        '
-        Me.LineShape1.BorderColor = System.Drawing.Color.LightSteelBlue
-        Me.LineShape1.BorderWidth = 3
-        Me.LineShape1.Name = "LineShape1"
-        Me.LineShape1.SelectionColor = System.Drawing.Color.NavajoWhite
-        Me.LineShape1.X1 = 7
-        Me.LineShape1.X2 = 361
-        Me.LineShape1.Y1 = 255
-        Me.LineShape1.Y2 = 256
-        '
-        'lnsCancel
-        '
-        Me.lnsCancel.BorderColor = System.Drawing.Color.LightSteelBlue
-        Me.lnsCancel.BorderWidth = 3
-        Me.lnsCancel.Name = "lnsCancel"
-        Me.lnsCancel.SelectionColor = System.Drawing.Color.NavajoWhite
-        Me.lnsCancel.X1 = 6
-        Me.lnsCancel.X2 = 360
-        Me.lnsCancel.Y1 = 387
-        Me.lnsCancel.Y2 = 388
+        'Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        'Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        'Me.ShapeContainer1.Name = "ShapeContainer1"
+        'Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape2, Me.LineShape1, Me.lnsCancel})
+        'Me.ShapeContainer1.Size = New System.Drawing.Size(374, 516)
+        'Me.ShapeContainer1.TabIndex = 29
+        'Me.ShapeContainer1.TabStop = False
+        ''
+        ''LineShape2
+        ''
+        'Me.LineShape2.BorderColor = System.Drawing.Color.LightSteelBlue
+        'Me.LineShape2.BorderWidth = 3
+        'Me.LineShape2.Name = "LineShape2"
+        'Me.LineShape2.SelectionColor = System.Drawing.Color.NavajoWhite
+        'Me.LineShape2.X1 = 11
+        'Me.LineShape2.X2 = 365
+        'Me.LineShape2.Y1 = 127
+        'Me.LineShape2.Y2 = 127
+        ''
+        ''LineShape1
+        ''
+        'Me.LineShape1.BorderColor = System.Drawing.Color.LightSteelBlue
+        'Me.LineShape1.BorderWidth = 3
+        'Me.LineShape1.Name = "LineShape1"
+        'Me.LineShape1.SelectionColor = System.Drawing.Color.NavajoWhite
+        'Me.LineShape1.X1 = 7
+        'Me.LineShape1.X2 = 361
+        'Me.LineShape1.Y1 = 255
+        'Me.LineShape1.Y2 = 256
+        ''
+        ''lnsCancel
+        ''
+        'Me.lnsCancel.BorderColor = System.Drawing.Color.LightSteelBlue
+        'Me.lnsCancel.BorderWidth = 3
+        'Me.lnsCancel.Name = "lnsCancel"
+        'Me.lnsCancel.SelectionColor = System.Drawing.Color.NavajoWhite
+        'Me.lnsCancel.X1 = 6
+        'Me.lnsCancel.X2 = 360
+        'Me.lnsCancel.Y1 = 387
+        'Me.lnsCancel.Y2 = 388
         '
         'pnlHistory
         '
@@ -327,7 +327,7 @@ Partial Class AccountHistory
         Me.pnlButtons.Controls.Add(Me.btnAllTrn)
         Me.pnlButtons.Controls.Add(Me.btnLastTrn)
         Me.pnlButtons.Controls.Add(Me.btnReturn)
-        Me.pnlButtons.Controls.Add(Me.ShapeContainer1)
+        ' Me.pnlButtons.Controls.Add(Me.ShapeContainer1)
         Me.pnlButtons.Location = New System.Drawing.Point(368, 0)
         Me.pnlButtons.Name = "pnlButtons"
         Me.pnlButtons.Size = New System.Drawing.Size(374, 516)
@@ -514,10 +514,10 @@ Partial Class AccountHistory
     Friend WithEvents rptAccountHistory As C1.Win.C1Report.C1Report
     Friend WithEvents rptLastTrans As C1.Win.C1Report.C1Report
     Friend WithEvents TPRFTableAdapter1 As Canteen.dsCanteenTableAdapters.tPRFTableAdapter
-    Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
-    Friend WithEvents lnsCancel As Microsoft.VisualBasic.PowerPacks.LineShape
-    Friend WithEvents LineShape2 As Microsoft.VisualBasic.PowerPacks.LineShape
-    Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
+    'Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
+    'Friend WithEvents lnsCancel As Microsoft.VisualBasic.PowerPacks.LineShape
+    'Friend WithEvents LineShape2 As Microsoft.VisualBasic.PowerPacks.LineShape
+    'Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents pnlHistory As System.Windows.Forms.Panel
     Friend WithEvents pnlButtons As System.Windows.Forms.Panel
     Friend WithEvents Label1 As System.Windows.Forms.Label
