@@ -17,17 +17,22 @@
     End Sub
 
     Private Sub Login()
+        Dim valid As Boolean = False
         For Each drUser As DataRow In Me.dsCanteen1.tUSR.Rows
             If drUser.Item("USR_Login").ToString.ToLower = txbUserName.Text.ToLower And drUser.Item("USR_Password") = txbPassword.Text Then
                 usrId = drUser.Item("USR_ID")
                 usrAdmin = drUser.Item("USR_Admin")
                 LoadPrefs()
+                valid = True
                 Dim frmOrders As New Orders
                 frmOrders.Show()
                 Me.Close()
-            Else : lblError.Text = "Error logging in! Please try again."
+
             End If
         Next
+        If valid = False Then
+            lblError.Text = "Error logging in! Please try again."
+        End If
     End Sub
 
     Private Sub Login_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

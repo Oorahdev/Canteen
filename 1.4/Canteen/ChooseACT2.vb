@@ -95,31 +95,15 @@ Public Class ChooseACT2
         current.SelectionStart = ret.SelectionStart
         current.SelectionLength = ret.SelectionLength
     End Sub
+
+    Private Sub a() Handles lsbActID.DoubleClick
+        openAccount()
+    End Sub
     Public Sub AdmKeypad1_OnKeyPressSpecial_1(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles AdmKeyboard1.OnKeyPressSpecial
 
         Select Case e.KeyCode
             Case Is = Keys.Enter
-                EnlargePhoto()
-                If preOrderMode() = True And CheckTimeRange() = False Then
-                    Exit Sub
-                End If
-
-                'If lsbActID.SelectedItems.Count() > 0 Then
-                '    actId = lsbActID.SelectedValue
-                'End If
-                If lsbActID.SelectedItems.Count > 0 Then
-                    If boolPhotoWarning = True Then
-                        If promptNoPicture = True Then
-                            If PictureBox1.Image Is Nothing And preOrderMode() = False Then
-                                If MsgBox("This account does not have a photo. Would you like to continue?", MsgBoxStyle.YesNo) = MsgBoxResult.No Then
-                                    Exit Sub
-                                End If
-                                'Me.Close()
-                            End If
-                        End If
-                    End If
-                End If
-                Me.DialogResult = Windows.Forms.DialogResult.OK
+                openAccount()
             Case Else
                 Dim ret As adm.admUtilities.TextWithSelection = adm.admUtilities.ProcessKeyEvent(adm.admUtilities.TextWithSelection.FromTextBox(current), e)
                 current.Text = ret.Text
@@ -222,22 +206,26 @@ Public Class ChooseACT2
 
     Private Sub txbActID_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txbActID.KeyDown
         If e.KeyCode = Keys.Enter Then
-            If preOrderMode() = True And CheckTimeRange() = False Then
-                Exit Sub
-            End If
-            If boolPhotoWarning = True Then
-                If promptNoPicture = True Then
-                    If PictureBox1.Image Is Nothing Then
-                        If promptNoPicture = True And preOrderMode() = False Then
-                            If MsgBox("This account does not have a photo. Would you like to continue?", MsgBoxStyle.YesNo) = MsgBoxResult.No Then
-                                Exit Sub
-                            End If
+            openAccount()
+        End If
+    End Sub
+
+    Private Sub openAccount()
+        If preOrderMode() = True And CheckTimeRange() = False Then
+            Exit Sub
+        End If
+        If boolPhotoWarning = True Then
+            If promptNoPicture = True Then
+                If PictureBox1.Image Is Nothing Then
+                    If promptNoPicture = True And preOrderMode() = False Then
+                        If MsgBox("This account does not have a photo. Would you like to continue?", MsgBoxStyle.YesNo) = MsgBoxResult.No Then
+                            Exit Sub
                         End If
                     End If
                 End If
             End If
-            Me.DialogResult = Windows.Forms.DialogResult.OK
         End If
+        Me.DialogResult = Windows.Forms.DialogResult.OK
     End Sub
 
     Private Sub lsbActID_SelectedValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles lsbActID.SelectedValueChanged
